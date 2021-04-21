@@ -10,8 +10,8 @@ class UsersController < ApplicationController
     end
 
     def create
-        binding.pry
-        # User.find_or_create_by(name: params[:username])
+        user = User.find_or_create_by(user_params)
+        render json: UserSerializer.new(user)
     end
 
     private

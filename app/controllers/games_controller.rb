@@ -1,5 +1,6 @@
 class GamesController < ApplicationController
     def create
+        Game.create(game_params)
         binding.pry
     end
     

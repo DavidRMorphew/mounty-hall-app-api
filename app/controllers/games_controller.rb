@@ -1,11 +1,16 @@
 class GamesController < ApplicationController
     def create
-        Game.create(game_params)
-        binding.pry
+        saved_game = Game.create(game_params)
+        render json: GameSerializer.new(saved_game)
     end
     
     def index
-        games = Game.all.joins(:user).order(:user_id)
+        if params[:user_id]
+            user = User.find_by(id: params[:user_id])
+            games = user.games
+        else 
+            games = Game.all.joins(:user).order(:user_id)
+        end
         # order(user_id: :desc)
         render json: GameSerializer.new(games)
         # Game.order(user_win: :desc) [winning on top]

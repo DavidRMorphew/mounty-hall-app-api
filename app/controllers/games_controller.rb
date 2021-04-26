@@ -9,6 +9,7 @@ class GamesController < ApplicationController
             user = User.find_by(id: params[:user_id])
             games = user.games
         else 
+            # games = Game.all
             # games = Game.all.joins(:user).order(:user_id)
             games = Game.ordered_by_user_winning_percentage
         end

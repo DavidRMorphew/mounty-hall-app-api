@@ -1,5 +1,5 @@
 class UserSerializer
   include FastJsonapi::ObjectSerializer
   has_many :games
-  attributes :name
+  attributes :name, :winning_game_percentage
 end

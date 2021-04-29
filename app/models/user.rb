@@ -17,7 +17,7 @@ class User < ApplicationRecord
         if (user_games_total != 0)
             switch_percentage = (user_games_switch_count.to_f / user_games_total.to_f) * 100
         else
-            switch_percentage = 0.0
+            switch_percentage = "N/A"
         end
     end
 
@@ -27,7 +27,7 @@ class User < ApplicationRecord
         if (user_games_switch.count != 0)
             switch_and_win_percentage = (user_games_switch_and_win.count.to_f / user_games_switch.count.to_f) * 100
         else
-            switch_and_win_percentage = 0.0
+            switch_and_win_percentage = "N/A"
         end
     end
 
@@ -37,7 +37,7 @@ class User < ApplicationRecord
         if (user_games_stay.count != 0)
             stay_and_win_percentage = (user_games_stay_and_win.count.to_f / user_games_stay.count.to_f) * 100
         else
-            stay_and_win_percentage = 0.0
+            stay_and_win_percentage = "N/A"
         end
     end
 

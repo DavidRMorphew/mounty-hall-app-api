@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
     def index
-        users = User.all
+        users = User.ordered_by_game_winning_percentage
         render json: UserSerializer.new(users, include: [:games])
     end
     

@@ -1,24 +1,42 @@
-# README
+# The Mounty Hall App API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Purpose and Usage
+This API is designed to calculate and persist game results data and user statistical data for the [Mounty Hall App](https://github.com/DavidRMorphew/mounty-hall-app-frontend).
 
-Things you may want to cover:
+First, fork this API.
 
-* Ruby version
+You can then type this command in your terminal to clone the API:
 
-* System dependencies
+```
+git clone git@github.com:DavidRMorphew/mounty-hall-app-api.git
+```
 
-* Configuration
 
-* Database creation
+## Starting the API Server
 
-* Database initialization
+Once you've installed the API, open the API's directory:
+```
+cd mounty-hall-app-api
+```
+Before starting, be sure to run:
+```
+bundle install
+```
 
-* How to run the test suite
+To get the API server running, run the following command in the terminal:
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+rails s
+```
 
-* Deployment instructions
+To stop the server, press `ctrl + c`.
+## Seed Data
 
-* ...
+If you would like to take advantage of some seed data I have provided, run:
+```
+rails db:seed 
+``` 
+Then stop and restart the server.
+
+## License
+The app is open source under the terms of the [MIT License]

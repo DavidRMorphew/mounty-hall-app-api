@@ -38,5 +38,13 @@ rails db:seed
 ``` 
 Then stop and restart the server.
 
+## Contributing
+
+Pull requests are welcome. If you want to make major changes, please open an issue first to discuss the proposed change.
+
+Please feel free to add and update tests where appropriate.
+
+This project is built for welcomed collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
+
 ## License
-The app is open source under the terms of the [MIT License]
+The app is open source under the terms of the [MIT License](https://github.com/DavidRMorphew/mounty-hall-app-api/blob/main/LICENSE.txt).

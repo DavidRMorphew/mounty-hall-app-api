@@ -9,14 +9,9 @@ class GamesController < ApplicationController
             user = User.find_by(id: params[:user_id])
             games = user.games
         else 
-            # games = Game.all
-            # games = Game.all.joins(:user).order(:user_id)
             games = Game.ordered_by_user_winning_percentage
         end
-        # order(user_id: :desc)
         render json: GameSerializer.new(games)
-        # Game.order(user_win: :desc) [winning on top]
-        # Game.order(user_switch: :desc) [user_switch true on top]
     end
 
     private

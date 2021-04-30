@@ -4,10 +4,11 @@ class UsersController < ApplicationController
         render json: UserSerializer.new(users, include: [:games])
     end
     
-    def show
-        user = User.find(params[:id])
-        render json: UserSerializer.new(user)
-    end
+    # def show
+    #     binding.pry
+    #     user = User.find(params[:id])
+    #     render json: UserSerializer.new(user)
+    # end
 
     def create
         user = User.find_or_create_by(user_params)

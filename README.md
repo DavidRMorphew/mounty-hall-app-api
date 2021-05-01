@@ -1,5 +1,5 @@
 # The Mounty Hall App API
-
+![mounty-with-beaver image](https://i.imgur.com/fpSzJsN.png)
 ## Purpose and Usage
 This API is designed to calculate and persist game results data and user names and statistical data for the [Mounty Hall App](https://github.com/DavidRMorphew/mounty-hall-app-frontend).
 
